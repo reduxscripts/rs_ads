@@ -44,7 +44,7 @@ $(function () {
     
         $('#alerts').empty();
         var listItem = $('<div></div>').addClass('w-auto items-center py-2')
-            .html('<h3 class="text-center text-2xl text-white">' + data.title.toUpperCase() + ' |    ' + data.text.toUpperCase() + '</h3>')
+            .html('<h3 class="text-center text-2xl text-white">' + '<span style="color: yellow;">' + data.title.toUpperCase() + '</span>' + ' || ' + data.text.toUpperCase() + '</h3>')
             .css({position: 'relative', overflow: 'hidden'});
         $('#alerts').append(listItem);
     
