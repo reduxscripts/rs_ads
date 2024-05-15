@@ -49,13 +49,26 @@ RegisterNetEvent('SendAlert', function()
 
     local input = lib.inputDialog(Language.UI, {
         {type = 'input', label = Language.Title, description = Language.EnterTitle, required = true},
-        {type = 'input', label = Language.Description, description = Language.EnterDescription, icon = 'hashtag', required = true},
+        {type = 'textarea', label = Language.Description, description = Language.EnterDescription, icon = 'hashtag', required = true, autosize = true},
 
     
     })
-    TriggerEvent('SendAd', input[1], input[2])
+
+    
+
+    if input then
+        local title = input[1]
+
+        local text = input[2]
+        TriggerServerEvent('SendAlert:Server', title, text)
+    else 
+        return end 
+    
 end)
 
+
+
+-- For server side trigger
 RegisterNetEvent('SendAd', function(title, text)
 
     SendNUIMessage({
