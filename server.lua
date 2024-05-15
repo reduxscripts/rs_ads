@@ -46,7 +46,6 @@ AddEventHandler('SendAlert:Server', function(title, text)
                 TriggerClientEvent('SendAd', v, title, text)
             end
         end
-    else
         for _, v in ipairs(Core.Functions.GetPlayers()) do
             local Player = Core.Functions.GetPlayer(v)
             if Player and not Player.PlayerData.job.name then
