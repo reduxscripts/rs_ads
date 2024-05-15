@@ -1,15 +1,15 @@
 Config = Config or {}
 
 
+---SETTINGS---
+Config.FW = "rs_base" -- Add your QBCore framework name Default: qb-core
 
-Config.FW = "rs_base"
-
-Config.CustomNotify = true
+Config.CustomNotify = true -- Custom notify Default: false
 
 
-Config.Command = "ad"
+Config.Command = "ad" -- The ad command name
 
-Config.Jobs = {
+Config.Jobs = { -- Required jobs init
     'police',
     'ambulance',
     'mechanic',
@@ -18,8 +18,8 @@ Config.Jobs = {
     'bennys',
 }
 
-
-Language = {
+---LANGUAGE---
+Language = { 
     UI = "AD CREATOR",
     Title = "Title",
     EnterTitle = "Enter your title",
